@@ -1,6 +1,4 @@
 spring:
-  application:
-    name: gym-management
   datasource:
     url: jdbc:mysql://localhost:3306/gym_managementDB?useSSL=false&serverTimezone=UTC
     username: root
@@ -8,17 +6,8 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
-      ddl-auto: create
-    show-sql: true
+      ddl-auto: update
+    show-sql: false
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
-
-server:
-  port: 8080
-
-# Default admin bootstrap credentials (override in env or external config for production)
-app:
-  admin:
-    email: admin@example.com
-    password: admin123
